@@ -1,0 +1,50 @@
+/* CodeReviewForm.css */
+
+/* Clover spinner in pleasant green */
+.clover-spinner {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.clover-spinner div {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #4caf50; /* pleasant green */
+  border-radius: 50%;
+  animation: clover 1s infinite ease-in-out;
+}
+
+/* Arrange four circles in a clover pattern */
+.clover-spinner div:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.clover-spinner div:nth-child(2) {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.clover-spinner div:nth-child(3) {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.clover-spinner div:nth-child(4) {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+@keyframes clover {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+}
